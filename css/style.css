@@ -99,19 +99,34 @@ header {
 
     color: var(--secondary-text-color);
 }
-.nav-links-studio,
-.nav-links-portfolio, 
-.nav-links-contacts {
+.nav-pages-list {
+    position: relative;
+}
+.nav-link.current-page {
+    color: var(--accent-color);
+}
+.current-page::after,
+.nav-link:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    top: 44px;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    color: var(--accent-color);
+}
+
+.nav-link {
     color: var(--secondary-text-color);
 }
-.nav-links-studio:hover, 
-.nav-links-portfolio:hover, 
-.nav-links-contacts:hover,
+.nav-link:hover, 
 .contact-mail:hover,
 .contact-tel:hover,
-.nav-links-studio:focus, 
-.nav-links-portfolio:focus, 
-.nav-links-contacts:focus,
+.nav-link:focus, 
 .contact-mail:focus,
 .contact-tel:focus {
     color: var(--accent-color);
