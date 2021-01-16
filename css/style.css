@@ -117,7 +117,7 @@ header {
     height: 4px;
 
     border-radius: 2px;
-    color: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 .nav-link {
