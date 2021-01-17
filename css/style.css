@@ -663,7 +663,8 @@ button {
     transform: translateY(100%);
     transition: transform 250ms linear;
 }
-.image-link:hover .image-overlay {
+.image-link:hover .image-overlay,
+.image-link:focus .image-overlay {
     transform: translateY(0);
 }
 .image-over-text {
