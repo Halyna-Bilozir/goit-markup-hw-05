@@ -727,15 +727,12 @@ button {
     color: var(--primary-text-color);
 }
 /*Створення модального вікна*/
-html {
-    position: relative;
-}
 .backdrop {
     position: fixed;
-    width: 0px;
-    height: 0px;
     left: 0px;
     top: 0px;
+    bottom: 0px;
+    right: 0px;
 
     background: rgba(0, 0, 0, 0.2);
 }
@@ -746,7 +743,7 @@ html {
     width: 528px;
     height: 581px;
 
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50% -50%);
 
     background: var(--primary-backgroud-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
