@@ -16,6 +16,9 @@
 
     --icon-color: #AFB1B8;
     --bg-footer-icon:rgba(255, 255, 255, 0.1);
+
+    --time-duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Забираємо точки в списках і підкреслення ссилок*/
@@ -120,12 +123,12 @@ header {
     border-radius: 2px;
     background-color: var(--accent-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-duration) var(--timing-function);
 }
 
 .nav-link {
     color: var(--secondary-text-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-duration) var(--timing-function);
 }
 .nav-link:hover, 
 .contact-mail:hover,
@@ -140,6 +143,8 @@ header {
     display: inline-flex;
     align-items: center;
     color: var(--primary-text-color);
+
+    transition: color var(--time-duration) var(--timing-function);
 }
 .nav-pages {
     display: flex;
@@ -166,6 +171,8 @@ header {
 .contact-icon {
     margin-right: 10px;
     fill: currentColor;
+
+    transition: fill var(--time-duration) var(--timing-function);
 }
 .contact-icon:hover,
 .contact-icon:focus {
@@ -413,7 +420,7 @@ header {
     color: var(--icon-color);
     border-radius: 50%;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--time-duration) var(--timing-function), background-color var(--time-duration) var(--timing-function);
 }
 .team-icon {
     width: 20px;
@@ -464,7 +471,7 @@ header {
     box-sizing: border-box;
     border-radius: 4px;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: color var(--time-duration) var(--timing-function), border var(--time-duration) var(--timing-function);
 }
 .clients-icon {
     fill: currentColor;
@@ -545,7 +552,7 @@ address {
     color: var(--primary-backgroud-color);
     border-radius: 50%;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: background-color var(--time-duration) var(--timing-function);
 }
 .footer-icon {
     width: 20px;
@@ -606,15 +613,16 @@ button {
     border: 2px solid transparent;
     border-radius: 4px;
     cursor: pointer;
+
+    transition: color var(--time-duration) var(--timing-function), background-color var(--time-duration) var(--timing-function), box-shadow var(--time-duration) var(--timing-function);
 }
 .list-button-secondary {
     background: var(--team-background-color);
 }
-.list-button-secondary:hover {
+.list-button-secondary:hover,
+.list-button-secondary:focus {
     color: var(--primary-backgroud-color);
     background-color: var(--accent-color);
-}
-.list-button-secondary:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .list-button-secondary, 
@@ -646,7 +654,7 @@ button {
     background: var(--primary-backgroud-color);
     overflow: hidden;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border var(--time-duration) var(--timing-function), box-shadow var(--time-duration) var(--timing-function);
 }
 .image-link:hover,
 .image-link:focus {
@@ -672,7 +680,7 @@ button {
 
     background: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--time-duration) var(--timing-function);
 }
 .image-link:hover .image-overlay,
 .image-link:focus .image-overlay {
@@ -738,15 +746,15 @@ html {
     width: 528px;
     height: 581px;
 
-    background: #FFFFFF;
+    background: var(--primary-backgroud-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
-.hidden {
+.is-hidden {
     opacity: 0;
     pointer-events: none;
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity var(--time-duration) var(--timing-function);
 }
 .hero-button:active {
     opacity: 1;
