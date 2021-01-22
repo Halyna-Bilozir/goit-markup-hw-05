@@ -731,10 +731,20 @@ button {
     position: fixed;
     left: 0px;
     top: 0px;
-    bottom: 0px;
-    right: 0px;
+    width: 100%;
+    height: 100%;
 
     background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity var(--time-duration) var(--timing-function);
+}
+.backdrop.is-hidden {
+    /*visibility: hidden;*/
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.75);
 }
 .modal {
     position: absolute;
@@ -743,16 +753,33 @@ button {
     width: 528px;
     height: 581px;
 
-    transform: translate(-50% -50%);
+    transform: translate(-50%, -50%) scale(1);
 
     background: var(--primary-backgroud-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-}
-.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
 
-    transition: opacity var(--time-duration) var(--timing-function);
+    transition: transform var(--time-duration) var(--timing-function);
+}
+/*Оформлення кнопки*/
+.close-icon {
+    fill: currentColor;
+}
+.modal-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    background: var(--primary-backgroud-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    color: #000;
+    border-radius: 50%;
 }
